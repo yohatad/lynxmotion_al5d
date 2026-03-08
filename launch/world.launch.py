@@ -22,13 +22,6 @@ def generate_launch_description():
         name='joint_state_publisher_gui'
     )
 
-    # Table joint state publisher (table has no movable joints; publishes empty states)
-    table_joint_state_publisher = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
-        name='table_joint_state_publisher',
-    )
-
     # Robot state publisher
     robot_state_publisher = Node(
         package='robot_state_publisher',
@@ -81,7 +74,6 @@ def generate_launch_description():
         robot_state_publisher,
         table_state_publisher,
         joint_state_publisher_gui,
-        table_joint_state_publisher,
         al5d_wrt_map_tf,
         table_wrt_map_tf,
         rviz,
