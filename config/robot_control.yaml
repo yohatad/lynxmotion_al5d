@@ -1,0 +1,29 @@
+/gazebo_ros_control:
+    pid_gains:
+    #   Pid values removed for more stable movement
+        Joint1: {p: 1000.0, i: 0.0, d: 200.0, antiwindup: true}
+        Joint2: {p: 3000.0, i: 0.0, d: 500.0, antiwindup: true}
+        Joint3: {p: 5000.0, i: 0.0, d: 300.0, antiwindup: true}
+        Joint4: {p: 500.0, i: 10.0, d: 200.0, antiwindup: true}
+        Joint5: {p: 100.0, i: 0.0, d: 13.0, antiwindup: true}
+        Gripper: {p: 100.0, i: 0.01, d: 10.0, antiwindup: true}
+        # the following gains are used by the gazebo_mimic_joint plugin
+        right_finger_joint: {p: 100.0, i: 0.0, d: 0.0}
+        left_finger_joint: {p: 100.0, i: 0.0, d: 0.0}
+
+lynxmotion_al5d:
+    # Publish all joint states -----------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50  
+
+    # Controller for all joints
+    joints_positions:
+        type: position_controllers/JointGroupPositionController
+        joints:
+            - Joint1
+            - Joint2
+            - Joint3
+            - Joint4
+            - Joint5
+            - Gripper
