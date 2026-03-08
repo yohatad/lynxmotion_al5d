@@ -3,7 +3,7 @@
 
 <robot name="table" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <material name="brown">
-        <color rgba="${91.0/255} ${63.0/255} ${54.0/255}" />
+        <color rgba="${139.0/255} ${90.0/255} ${43.0/255} 1" />
     </material>
     
     <xacro:property name="support_size1" value="0.05" />
