@@ -1,35 +1,40 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>lynxmotion_al5d_description</name>
   <version>0.1.0</version>
-  <description>The lynxmotion_al5d_description package</description>
-  <maintainer email="vadjibi@andrew.cmu.edu">Vinny Adjibi</maintainer>
-
+  <description>Lynxmotion AL5D robot description with URDF/Xacro, Gazebo integration, and brick management services</description>
+  <maintainer email="yohatad000@gmail.com">yoha</maintainer>
   <license>BSD</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>message_generation</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>tf2</build_depend>
-  <build_depend>roslib</build_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-  <exec_depend>controller_manager</exec_depend>
-  <exec_depend>gazebo_ros</exec_depend>
-  <exec_depend>joint_state_publisher</exec_depend>
-  <exec_depend>roboticsgroup_gazebo_plugins</exec_depend>  <!-- from https://github.com/roboticsgroup/roboticsgroup_gazebo_plugins -->
-  <exec_depend>robot_state_publisher</exec_depend>
-  <exec_depend>rviz</exec_depend>
-  <exec_depend>urdf</exec_depend>
-  <exec_depend>xacro</exec_depend>
-  <exec_depend>message_runtime</exec_depend>
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>roslib</exec_depend>
+  <depend>gazebo_msgs</depend>
+  <depend>gazebo_ros</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2_ros</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>rviz2</depend>
+  <depend>controller_manager</depend>
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
 
-  <build_export_depend>roscpp</build_export_depend>
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
+    <build_type>ament_cmake</build_type>
     <gazebo_ros gazebo_model_path="${prefix}/models"/>
     <gazebo_ros gazebo_media_path="${prefix}/worlds"/>
   </export>
-
 </package>

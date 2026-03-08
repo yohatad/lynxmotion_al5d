@@ -2,24 +2,33 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     
     <!-- Include materials -->
+    <!-- Materials -->
+    <!-- Materials -->
+    <material name="transparent">
+    <color rgba="0.0 0.0 0.0 0.0"/>
+    </material>
+
     <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0" />
+    <color rgba="0.0 0.0 0.0 1.0"/>
     </material>
+
     <material name="Green">
-        <color rgba="0.0 1.0 0.0 1.0" />
+    <color rgba="0.0 1.0 0.0 1.0"/>
     </material>
-    <material name="white">
-        <color rgba="1 1 1 1" />
+
+    <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
     </material>
+
     <material name="Silver">
-        <color rgba="0.8 0.8 0.8 1" />
+    <color rgba="0.8 0.8 0.8 1.0"/>
     </material>
+
     <material name="BlueGrey">
-        <color rgba="1 87 155 1" />
+    <color rgba="0.004 0.341 0.608 1.0"/>
     </material>
-    <material name="Transparent">
-        <color rgba="0.0 0.0 0.0 0.0" />
-    </material>
+
+
     
     <!-- Setting properties to be used in the program -->
     <xacro:property name="PI" value="3.14159" />

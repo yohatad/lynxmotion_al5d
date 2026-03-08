@@ -11,13 +11,15 @@
     <link name="robot_support">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/support.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/support.dae"/>
             </geometry>
-            <origin rpy="0 0 0" xyz="0 0 0" />
-        </visual>   
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        <material name="Silver"/>
+        </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/support.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/support.stl"/>
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/support.stl"/> -->
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0" />
         </collision>   
@@ -28,13 +30,16 @@
     <link name="robot_base_cylinder">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/rotation_cylinder.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/rotation_cylinder.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/rotation_cylinder.dae" /> -->
             </geometry>
             <origin rpy="0 0 0" xyz="0 -0.021 0" />
+            <material name="Silver"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/rotation_cylinder.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/rotation_cylinder.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/rotation_cylinder.stl" /> -->
             </geometry>
             <origin rpy="0 0 0" xyz="0 -0.021 0" />
         </collision>
@@ -45,13 +50,16 @@
     <link name="robot_base_top_box">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/top_box.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/top_box.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/top_box.dae" /> -->
             </geometry>
             <origin xyz="-0.01 0.03 0" rpy="0 0 ${PI}" />
+            <material name="BlueGrey"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/top_box.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/top_box.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/top_box.stl" /> -->
             </geometry>
             <origin xyz="-0.01 0.03 0" rpy="0 0 ${PI}" />
         </collision>
@@ -62,13 +70,17 @@
     <link name="shoulder">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/shoulder.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/shoulder.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/shoulder.dae" /> -->
             </geometry>
+            <material name="Silver"/>
             <origin rpy="${-5*PI/8} 0 0" xyz="0.005 -0.0625 0.036" />
+            <material name="Silver"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/shoulder.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/shoulder.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/shoulder.stl" /> -->
             </geometry>
             <origin rpy="${-5*PI/8} 0 0" xyz="0.005 -0.0625 0.036" />
         </collision>
@@ -79,13 +91,16 @@
     <link name="elbow">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/elbow.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/elbow.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/elbow.dae" /> -->
             </geometry>
             <origin rpy="${-PI-0.895} ${PI} 0" xyz="-0.006 ${tube_length - 2*hs_755eb_depth/5} ${-shoulder_to_elbow - 0.018}" />
+            <material name="Silver"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/elbow.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/elbow.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/elbow.stl" /> -->
             </geometry>
             <origin rpy="${-PI-0.895} ${PI} 0" xyz="-0.005 ${tube_length - 2*hs_755eb_depth/5 + 0.005} ${-shoulder_to_elbow - 0.02} " />
         </collision>
@@ -96,13 +111,16 @@
     <link name="wrist">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/wrist.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/wrist.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/wrist.dae" /> -->
             </geometry>
             <origin rpy="${PI} 0 0" xyz="0.005 -0.165 0.0695" />
+            <material name="Silver"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/wrist.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/wrist.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/wrist.stl" /> -->
             </geometry>
             <origin rpy="${PI} 0 0" xyz="0 -0.165 0.067" />
         </collision>
@@ -113,13 +131,16 @@
     <link name="gripper">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/gripper.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/gripper.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/gripper.dae" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="0 -0.02 0.0" />
+            <material name="Black"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/gripper.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/gripper.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/gripper.stl" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="0 -0.02 0" /> <!---0.021 -0.005" /> -->
         </collision>
@@ -130,13 +151,16 @@
     <link name="left_finger">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/finger_left.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/finger_left.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/finger_left.dae" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="0.001 -0.005 0" />
+            <material name="Black"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/finger_left.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/finger_left.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/finger_left.stl" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="0.001 -0.005 0" />
         </collision>
@@ -147,13 +171,16 @@
     <link name="right_finger">
         <visual>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/finger_right.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/visual/finger_right.dae" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/visual/finger_right.dae" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="-0.003 -0.005 0" />
+            <material name="Black"/>
         </visual>
         <collision>
             <geometry>
-                <mesh filename="package://lynxmotion_al5d_description/meshes/robot_parts/finger_right.dae" />
+                <mesh filename="package://lynxmotion_al5d_description/meshes/collision/finger_right.stl" />
+                <!-- <mesh filename="file:///home/yoha/lynx/lynxmotion_al5d_description/meshes/collision/finger_right.stl" /> -->
             </geometry>
             <origin rpy="${PI/2} 0 ${-PI/2}" xyz="-0.003 -0.005 0" />
         </collision>
@@ -168,7 +195,7 @@
             <geometry>
                 <box size="0.01 0.01 0.01" />
             </geometry>
-            <material name="transparent">Gazebo/GreyTransparent</material>
+            <material name="transparent"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -186,7 +213,7 @@
                 <box size="0.0001 0.0001 0.0001" />
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0" />
-            <material name="transparent">Gazebo/GreyTransparent</material>
+            <material name="transparent"/>
         </visual>
         <collision>
             <geometry>
@@ -301,11 +328,65 @@
     <xacro:transmission_block joint_name="Joint5"/>
     <xacro:transmission_block joint_name="Gripper"/>
 
-    <!-- ros_control plugin -->
+    <!-- ros2_control hardware interface -->
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="Joint1">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="Joint2">
+            <command_interface name="position">
+                <param name="min">0</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="Joint3">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">0</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="Joint4">
+            <command_interface name="position">
+                <param name="min">-1.5708</param>
+                <param name="max">1.5708</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="Joint5">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+        <joint name="Gripper">
+            <command_interface name="position">
+                <param name="min">0</param>
+                <param name="max">0.03175</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
+    </ros2_control>
+
+    <!-- gazebo_ros2_control plugin -->
     <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/lynxmotion_al5d</robotNamespace>
-            <legacyModeNS>true</legacyModeNS>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <parameters>$(find lynxmotion_al5d_description)/config/ros2_controllers.yaml</parameters>
         </plugin>
     </gazebo>
 
@@ -336,13 +417,12 @@
             </camera>
 
             <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
-                <robotNamespace>/lynxmotion_al5d</robotNamespace>
-                <alwaysOn>true</alwaysOn>
-                <updateRate>1.0</updateRate>
-                <cameraName>external_vision</cameraName>
-                <imageToPIcName>image_raw</imageToPIcName>
-                <cameraInfoToPIcName>camera_info</cameraInfoToPIcName>
-                <frameName>camera_link</frameName>
+                <ros>
+                    <namespace>/lynxmotion_al5d/external_vision</namespace>
+                </ros>
+                <camera_name>external_vision</camera_name>
+                <frame_name>camera_link</frame_name>
+                <hack_baseline>0</hack_baseline>
             </plugin>
         </sensor>
     </gazebo>
