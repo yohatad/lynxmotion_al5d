@@ -30,7 +30,7 @@
         </visual>
         <collision>
             <geometry>
-                <box size="${support_size1} ${support_size1} ${support_size1}" />
+                <box size="${support_size1} ${support_size1} ${support_depth}" />
             </geometry>
             <material name="brown" />
             <origin rpy="0 0 0" xyz="${top_width/2 + support_size1/2} ${top_height/2} ${support_depth/2}" />
@@ -74,7 +74,7 @@
         </visual>
         <collision>
             <geometry>
-                <box size="${support_size1} ${support_size1} ${support_size1}" />
+                <box size="${support_size1} ${support_size1} ${support_depth}" />
             </geometry>
             <material name="brown" />
             <origin rpy="0 0 0" xyz="${-top_width/2 - support_size1/2} ${top_height/2} ${support_depth/2}" />
@@ -96,10 +96,10 @@
         </visual>
         <collision>
             <geometry>
-                <box size="${support_size1} ${support_size1} ${support_size1}" />
+                <box size="${support_size1} ${support_size1} ${support_depth}" />
             </geometry>
             <material name="brown" />
-            <origin rpy="0 0 0" xyz="${top_width/2 + support_size1/2} ${top_height/2} ${support_depth/2}" />
+            <origin rpy="0 0 0" xyz="${-top_width/2 - support_size1/2} ${-top_height/2} ${support_depth/2}" />
         </collision>
         <xacro:inertial_matrix mass="0.3" width="${support_size1}" height="${support_size1}" depth="${support_depth}" />
     </link>
@@ -129,4 +129,24 @@
         <parent link="table_link" />
         <child link="table_top" />
     </joint>
+
+    <gazebo reference="table_support_1">
+        <material>Gazebo/Wood</material>
+    </gazebo>
+    <gazebo reference="table_support_2">
+        <material>Gazebo/Wood</material>
+    </gazebo>
+    <gazebo reference="table_support_3">
+        <material>Gazebo/Wood</material>
+    </gazebo>
+    <gazebo reference="table_support_4">
+        <material>Gazebo/Wood</material>
+    </gazebo>
+    <gazebo reference="table_top">
+        <material>Gazebo/Wood</material>
+    </gazebo>
+
+    <gazebo>
+        <static>true</static>
+    </gazebo>
 </robot>
